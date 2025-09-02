@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Lumina — Modern Web Experiences</title>
+  <meta name="description" content="Lumina builds beautiful, high-performance websites and apps. Design, development, and growth in one place." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Lumina — Modern Web Experiences" />
+  <meta property="og:description" content="Beautiful, fast, accessible websites and apps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='100%' height='100%' fill='%230ea5e9'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='64' fill='white'>Lumina</text></svg>">
+
+  <!-- Favicon (inline SVG so no extra files) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+      <defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+        <stop stop-color='%230ea5e9'/><stop offset='1' stop-color='%237b5cff'/></linearGradient></defs>
+      <rect rx='14' ry='14' width='64' height='64' fill='url(%23g)'/>
+      <path d='M18 44L28 20h8l10 24h-7l-2-6H27l-2 6zM29 32h10l-5-13z' fill='white'/>
+    </svg>"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <!-- Skip link for a11y -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header id="top" class="site-header" data-shadow="false">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" aria-label="Lumina home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs><rect rx="14" ry="14" width="64" height="64" fill="url(#lg)"/><path d="M18 44L28 20h8l10 24h-7l-2-6H27l-2 6zM29 32h10l-5-13z" fill="white"/></svg>
+        <span class="brand-name">Lumina</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__sr">Open menu</span>
+          <span class="nav__bars"></span>
+        </button>
+        <ul id="navMenu" class="nav__menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Love</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact" class="btn btn--sm btn--primary">Contact</a></li>
+          <li class="theme-toggle">
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="container grid hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Design • Build • Launch</p>
+          <h1 class="headline">Ship beautiful websites <span class="grad">blazingly fast</span>.</h1>
+          <p class="lead">We craft accessible, high-performance web experiences that convert. From idea to launch, all in one place.</p>
+          <div class="cta">
+            <a class="btn btn--primary btn--lg" href="#pricing">Get Started</a>
+            <a class="btn btn--ghost btn--lg" href="#work">See our work</a>
+          </div>
+          <ul class="trust-list" aria-label="Client logos">
+            <li class="pill">Acme Inc.</li><li class="pill">Nova Labs</li><li class="pill">OrbitIO</li><li class="pill">Waveform</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <!-- Decorative, but still accessible with aria-hidden -->
+          <div class="device" aria-hidden="true">
+            <div class="device__screen">
+              <div class="code-line" style="--i:1"></div>
+              <div class="code-line" style="--i:2"></div>
+              <div class="code-line" style="--i:3"></div>
+              <div class="code-line" style="--i:4"></div>
+              <div class="code-line" style="--i:5"></div>
+              <div class="code-line" style="--i:6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#services" aria-label="Scroll to services">
+        <span></span>
+      </a>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,64L80,53.3C160,43,320,21,480,10.7C640,0,800,0,960,16C1120,32,1280,64,1360,80L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" fill="currentColor" opacity=".08"/></svg>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>What we do</h2>
+          <p class="sub">A full-stack studio to take you from idea to production.</p>
+        </header>
+        <div class="grid cards-3">
+          <article class="card reveal">
+            <div class="card__icon grad-bg" aria-hidden="true">🎨</div>
+            <h3>Design Systems</h3>
+            <p>Reusable, consistent component libraries with tokens, docs, and accessibility built-in.</p>
+            <ul class="list check">
+              <li>Tokenized themes</li><li>ARIA patterns</li><li>Figma ↔ code parity</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon grad-bg" aria-hidden="true">⚡</div>
+            <h3>Web Apps</h3>
+            <p>Modern SPA/MPA architecture optimized for performance, SEO, and maintainability.</p>
+            <ul class="list check">
+              <li>SSR/SSG ready</li><li>Core Web Vitals A+</li><li>Type-safe APIs</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon grad-bg" aria-hidden="true">🚀</div>
+            <h3>Growth & Analytics</h3>
+            <p>Experimentation frameworks, event pipelines, and dashboards to scale responsibly.</p>
+            <ul class="list check">
+              <li>A/B testing</li><li>Attribution</li><li>Data storytelling</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Featured work</h2>
+          <p class="sub">Selected projects that made users smile and metrics climb.</p>
+        </header>
+
+        <div class="work-grid grid">
+          <!-- Card 1 -->
+          <article class="work-card reveal">
+            <figure class="work-media skeleton" aria-label="Project preview">
+              <svg viewBox="0 0 16 9" preserveAspectRatio="none"><rect width="100%" height="100%" fill="currentColor" opacity=".1"/></svg>
+            </figure>
+            <div class="work-body">
+              <h3>OrbitIO Dashboard</h3>
+              <p>Realtime telemetry with offline-first sync and buttery interactions.</p>
+              <ul class="tags"><li>Design</li><li>Web App</li><li>PWA</li></ul>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-card reveal">
+            <figure class="work-media skeleton" aria-label="Project preview">
+              <svg viewBox="0 0 16 9" preserveAspectRatio="none"><rect width="100%" height="100%" fill="currentColor" opacity=".1"/></svg>
+            </figure>
+            <div class="work-body">
+              <h3>Nova Commerce</h3>
+              <p>Headless storefront optimized for 100/100 Lighthouse performance.</p>
+              <ul class="tags"><li>eCommerce</li><li>Performance</li><li>SSR</li></ul>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="work-card reveal">
+            <figure class="work-media skeleton" aria-label="Project preview">
+              <svg viewBox="0 0 16 9" preserveAspectRatio="none"><rect width="100%" height="100%" fill="currentColor" opacity=".1"/></svg>
+            </figure>
+            <div class="work-body">
+              <h3>Waveform Site</h3>
+              <p>A content site with MDX authoring and delightful micro-interactions.</p>
+              <ul class="tags"><li>Marketing</li><li>Animation</li><li>MDX</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Simple pricing</h2>
+          <p class="sub">Transparent plans that scale with you.</p>
+        </header>
+
+        <div class="pricing grid cards-3">
+          <article class="card price-card reveal" aria-label="Starter plan">
+            <div class="price">
+              <span class="amount">$<strong>499</strong></span>
+              <span class="period">/ one-time</span>
+            </div>
+            <h3>Starter Site</h3>
+            <p>Launch a beautiful single-page site in days.</p>
+            <ul class="list check">
+              <li>1 landing page</li><li>Responsive & accessible</li><li>Basic SEO</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--block">Start</a>
+          </article>
+
+          <article class="card price-card highlight reveal" aria-label="Growth plan">
+            <div class="badge">Most popular</div>
+            <div class="price">
+              <span class="amount">$<strong>2,499</strong></span>
+              <span class="period">/ project</span>
+            </div>
+            <h3>Growth</h3>
+            <p>Multi-page site with a CMS and analytics.</p>
+            <ul class="list check">
+              <li>Up to 10 pages</li><li>Headless CMS</li><li>Analytics & A/B</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--block">Choose Growth</a>
+          </article>
+
+          <article class="card price-card reveal" aria-label="Scale plan">
+            <div class="price">
+              <span class="amount">$<strong>5,999</strong></span>
+              <span class="period">/ month</span>
+            </div>
+            <h3>Scale</h3>
+            <p>Dedicated team as a service. Iterate weekly.</p>
+            <ul class="list check">
+              <li>Unlimited requests</li><li>Weekly sprints</li><li>Priority support</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--block">Talk to us</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>People ❤️ Lumina</h2>
+          <p class="sub">A few words from teams we’ve helped.</p>
+        </header>
+
+        <div class="testimonials grid cards-3">
+          <figure class="quote-card reveal">
+            <blockquote>“They didn’t just ship fast — they shipped right. Accessibility and performance were flawless.”</blockquote>
+            <figcaption>
+              <div class="avatar" aria-hidden="true">AJ</div>
+              <div><strong>Alex Johnson</strong><br><span>VP Eng, OrbitIO</span></div>
+            </figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“Our conversions jumped 38% after the redesign. The team is a joy to work with.”</blockquote>
+            <figcaption>
+              <div class="avatar" aria-hidden="true">SK</div>
+              <div><strong>Sara Kim</strong><br><span>Growth Lead, Nova</span></div>
+            </figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“Pixel-perfect, future-proof, and lightning quick. Couldn’t ask for more.”</blockquote>
+            <figcaption>
+              <div class="avatar" aria-hidden="true">MT</div>
+              <div><strong>Marco Torres</strong><br><span>Founder, Waveform</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>From the blog</h2>
+          <p class="sub">Notes on building delightful web products.</p>
+        </header>
+
+        <div class="blog grid cards-3">
+          <article class="post-card reveal">
+            <a class="post-thumb skeleton" href="#" aria-label="Read post: Designing for performance"></a>
+            <div class="post-body">
+              <h3><a href="#">Designing for performance</a></h3>
+              <p>How to balance aesthetics with Core Web Vitals like LCP, CLS, and TBT.</p>
+              <ul class="meta"><li>7 min</li><li>Perf</li></ul>
+            </div>
+          </article>
+
+          <article class="post-card reveal">
+            <a class="post-thumb skeleton" href="#" aria-label="Read post: Accessible by default"></a>
+            <div class="post-body">
+              <h3><a href="#">Accessible by default</a></h3>
+              <p>Practical ARIA patterns and keyboard UX that don’t feel like an afterthought.</p>
+              <ul class="meta"><li>6 min</li><li>A11y</li></ul>
+            </div>
+          </article>
+
+          <article class="post-card reveal">
+            <a class="post-thumb skeleton" href="#" aria-label="Read post: Motion with purpose"></a>
+            <div class="post-body">
+              <h3><a href="#">Motion with purpose</a></h3>
+              <p>Micro-interactions that guide, not distract — with prefers-reduced-motion in mind.</p>
+              <ul class="meta"><li>4 min</li><li>Motion</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <header class="section-header">
+          <h2>Let’s build something</h2>
+          <p class="sub">Tell us a little about your project — we’ll reply within 1 business day.</p>
+        </header>
+
+        <form id="contactForm" class="form card reveal" novalidate>
+          <div class="form__row">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Ada Lovelace" />
+            <span class="error" id="err-name" role="alert"></span>
+          </div>
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+            <span class="error" id="err-email" role="alert"></span>
+          </div>
+          <div class="form__row">
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="under-5k">Under $5k</option>
+              <option value="5-25k">$5k–$25k</option>
+              <option value="25-100k">$25k–$100k</option>
+              <option value="100k-plus">$100k+</option>
+            </select>
+            <span class="error" id="err-budget" role="alert"></span>
+          </div>
+          <div class="form__row">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" rows="5" minlength="20" required placeholder="What are you building? What's the goal?"></textarea>
+            <span class="error" id="err-message" role="alert"></span>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form__success" id="formSuccess" role="status" aria-live="polite" hidden>Thanks! We’ll be in touch shortly.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#hero" aria-label="Lumina home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs><rect rx="14" ry="14" width="64" height="64" fill="url(#lg2)"/><path d="M18 44L28 20h8l10 24h-7l-2-6H27l-2 6zM29 32h10l-5-13z" fill="white"/></svg>
+            <span class="brand-name">Lumina</span>
+          </a>
+          <p class="muted">© <span id="year"></span> Lumina Studio. All rights reserved.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <label for="newsEmail" class="sr-only">Email for newsletter</label>
+          <input id="newsEmail" type="email" placeholder="Email for updates" required />
+          <button class="btn btn--ghost" type="submit">Subscribe</button>
+          <span class="error" id="err-news" role="alert"></span>
+        </form>
+      </div>
+      <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+---
